@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "App Controls",
+    "description": "Adds Restart DSH Service and Refresh Page buttons to the client's application settings and session header."
+  }
+}

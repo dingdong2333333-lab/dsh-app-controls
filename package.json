@@ -1,0 +1,54 @@
+{
+  "name": "dsh-app-controls",
+  "version": "1.0.0",
+  "description": "Two buttons DSH forgot: restart the service and reload the page.",
+  "type": "module",
+  "license": "Unlicense",
+  "author": "DSH App Controls contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingdong2333333-lab/dsh-app-controls.git"
+  },
+  "homepage": "https://github.com/dingdong2333333-lab/dsh-app-controls",
+  "bugs": {
+    "url": "https://github.com/dingdong2333333-lab/dsh-app-controls/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "restart",
+    "reload"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

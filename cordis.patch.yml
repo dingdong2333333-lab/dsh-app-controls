@@ -1,0 +1,5 @@
+# dsh-app-controls bundle patch: mounts the Host half that serves the
+# restart route, plus the Client half that renders the buttons.
+- insert:
+    - id: dsh-app-controls
+      name: 'dsh-app-controls'
